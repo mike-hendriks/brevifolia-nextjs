@@ -8,8 +8,8 @@ sections:
   path: posts
   label: Posts
   create: all
-  match: "**/*.md"
-  new_doc_ext: ".md"
+  match: "**/*"
+  new_doc_ext: md
 - type: document
   path: posts
   label: posts
