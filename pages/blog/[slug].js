@@ -6,10 +6,10 @@ const glob = require('glob')
 import Layout from '../../components/Layout'
 
 export default function BlogTemplate({ frontmatter, markdownBody, siteTitle }) {
-  function reformatDate(fullDate) {
-    const date = new Date(fullDate)
-    return date.toDateString().slice(4)
-  }
+  // function reformatDate(fullDate) {
+  //   const date = new Date(fullDate)
+  //   return date.toDateString().slice(4)
+  // }
 
   /*
    ** Odd fix to get build to run
@@ -30,7 +30,7 @@ export default function BlogTemplate({ frontmatter, markdownBody, siteTitle }) {
         </figure>
         <div className="blog__info">
           <h1>{frontmatter.title}</h1>
-          <h3>{reformatDate(frontmatter.date)}</h3>
+          {/* <h3>{reformatDate(frontmatter.date)}</h3> */}
         </div>
         <div className="blog__body">
           <ReactMarkdown source={markdownBody} />

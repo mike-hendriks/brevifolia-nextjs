@@ -6,10 +6,10 @@ const BlogList = ({ allBlogs }) => {
     return content.slice(0, 200).trimEnd()
   }
 
-  function reformatDate(fullDate) {
-    const date = new Date(fullDate)
-    return date.toDateString().slice(4)
-  }
+  // function reformatDate(fullDate) {
+  //   const date = new Date(fullDate)
+  //   return date.toDateString().slice(4)
+  // }
 
   return (
     <>
@@ -27,7 +27,7 @@ const BlogList = ({ allBlogs }) => {
                   </div>
                   <div className="blog__info">
                     <h2>{post.frontmatter.title}</h2>
-                    <h3> {reformatDate(post.frontmatter.date)}</h3>
+                    {/* <h3> {reformatDate(post.frontmatter.date)}</h3> */}
                     <p>
                       <ReactMarkdown
                         source={truncateSummary(post.markdownBody)}
